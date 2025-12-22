@@ -1,0 +1,7 @@
+{
+  "name": "PolyLexiko",
+  "description": "A comprehensive Ancient Greek and Latin dictionary with polytonic support, grammar tables, and modern Greek definitions.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
