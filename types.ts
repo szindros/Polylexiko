@@ -1,5 +1,4 @@
 
-
 export enum Language {
   ANCIENT_GREEK = 'Ancient Greek',
   LATIN = 'Latin',
@@ -28,7 +27,7 @@ export interface ExampleSentence {
   source?: string;
 }
 
-// Fixed: Added missing EtymologyStep interface used by EtymologyVisualizer
+// Fixed: Added missing EtymologyStep interface for the EtymologyVisualizer component
 export interface EtymologyStep {
   period: string;
   form: string;

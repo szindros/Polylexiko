@@ -69,7 +69,7 @@ const DictionaryView: React.FC<DictionaryViewProps> = ({ entry, language, isSave
         </div>
       </section>
 
-      {/* Etymology Section */}
+      {/* Simplified Etymology Section */}
       <section className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="text-slate-900 font-bold border-l-4 border-amber-400 pl-3">
@@ -83,7 +83,6 @@ const DictionaryView: React.FC<DictionaryViewProps> = ({ entry, language, isSave
         </div>
       </section>
 
-      {/* Visual Thesaurus */}
       <VisualThesaurus 
         currentWord={isModernGreek ? entry.word : (entry.polytonicWord || entry.word)}
         synonyms={entry.synonyms}
@@ -91,10 +90,9 @@ const DictionaryView: React.FC<DictionaryViewProps> = ({ entry, language, isSave
         onWordClick={onWordNavigate}
       />
 
-      {/* Grammar Table */}
       <GrammarTableView table={entry.grammarTable} />
 
-      {/* Example Sentences */}
+      {/* Examples Section */}
       <section className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
         <h4 className="text-slate-900 font-bold border-l-4 border-indigo-400 pl-3 italic">Παραδείγματα Χρήσης</h4>
         <div className="space-y-6">
