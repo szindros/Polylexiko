@@ -27,7 +27,10 @@ export interface ExampleSentence {
   source?: string;
 }
 
-// Fixed: Added missing EtymologyStep interface for the EtymologyVisualizer component
+/**
+ * Interface representing a step in the etymological evolution of a word.
+ * Fixes: Module '"../types"' has no exported member 'EtymologyStep'.
+ */
 export interface EtymologyStep {
   period: string;
   form: string;
@@ -38,11 +41,14 @@ export interface DictionaryEntry {
   word: string;
   polytonicWord?: string;
   partOfSpeech: string;
+  adjectiveForms?: string; // e.g., "-ος, -η, -ον" for adjectives
   definition: string;
   synonyms: string[];
   antonyms: string[];
   grammarTable: GrammarTable;
   etymology: string;
+  // Optional steps for the EtymologyVisualizer component
+  etymologySteps?: EtymologyStep[];
   examples: ExampleSentence[];
 }
 

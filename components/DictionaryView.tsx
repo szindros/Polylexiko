@@ -54,9 +54,16 @@ const DictionaryView: React.FC<DictionaryViewProps> = ({ entry, language, isSave
               {getLanguageLabel()}
             </span>
           </div>
-          <h2 className="text-5xl sm:text-6xl font-serif text-slate-900 leading-tight pr-12">
-            {isModernGreek ? entry.word : (entry.polytonicWord || entry.word)}
-          </h2>
+          <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 flex-wrap">
+            <h2 className="text-5xl sm:text-6xl font-serif text-slate-900 leading-tight">
+              {isModernGreek ? entry.word : (entry.polytonicWord || entry.word)}
+            </h2>
+            {entry.adjectiveForms && (
+              <span className="text-2xl sm:text-3xl font-serif text-slate-400 italic">
+                ({entry.adjectiveForms})
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="space-y-6">
